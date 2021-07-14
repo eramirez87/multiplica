@@ -13,9 +13,11 @@
                             <p class='text-start'>&nbsp;<?= $color->year ?></p>
                             </div>
                             <h4 class='name text-center'><?= $color->name ?>
+                            <?php if($this->session->userdata['user']->usertype == 'A') : ?>
                                 <a class='float-right' href='<?= base_url("colors/edit/{$color->id}") ?>'>
                                     <i class="material-icons">create</i>
                                 </a>
+                            <?php endif; ?>
                             </h4>
                             <h3 class='text-center'><?= $color->color ?>
                             </h3>
@@ -26,7 +28,9 @@
             </div>
             <nav class="navbar fixed-bottom navbar-light bg-light">
                 <div class="container-fluid">
+                    <?php if($this->session->userdata['user']->usertype == 'A') : ?>
                     <a class='btn btn-warning' href="<?= base_url('colors/create') ?>">Agregar nuevo color</a>
+                    <?php endif; ?>
                     <nav aria-label="Page navigation example">
                         <ul class="pagination"></ul>
                     </nav>
