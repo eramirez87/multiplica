@@ -1,0 +1,11 @@
+span.colorcard p,
+span.colorcard h3,
+span.colorcard h4{
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.myhidden{
+    display: none;
+}
+.myhidden:hover{
+    display: block;
+}
